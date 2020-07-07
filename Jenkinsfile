@@ -1,6 +1,6 @@
 BUILD_STATUS = 'success';
 projectSiteUri = 'https://project-site.service.dev.lan/lixbox-test';
-gitUri = 'https://scm.service.dev.lan/lixbox/lixbox-supervision.git';
+gitUri = 'https://scm.service.dev.lan/lixbox/lixbox-test.git';
 mattermostUri = 'https://team.service.dev.lan/hooks/xwqzwmg7zpf18kkdxm3tqw1kqh';
 channel = 'lixbox';
 branchName = 'jdk-8'
