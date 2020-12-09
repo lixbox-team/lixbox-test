@@ -5,15 +5,15 @@ project(':lixbox-selenium'){
 
         
         //divers
-		compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.14.7'
-        compile group: 'commons-io', name: 'commons-io', version: '2.6'
+		compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.0'
+        compile group: 'commons-io', name: 'commons-io', version: '2.8.0'
         compile ('org.seleniumhq.selenium:selenium-java:3.141.59') {
             exclude group:'org.seleniumhq.selenium', module:'selenium-opera-driver'
         }      
         
-         
+
         // ================================ Test ================================
-		testCompile 'junit:junit:4.12'
+        testCompile group: 'junit', name:'junit', version: version_junit
 	}
     
     jar{
