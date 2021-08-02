@@ -1,19 +1,19 @@
 project(':lixbox-selenium'){    
 	dependencies {     
         //lixbox
-		compile(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common) 
+		api(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common) 
 
         
         //divers
-		compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.0'
-        compile group: 'commons-io', name: 'commons-io', version: '2.8.0'
-        compile ('org.seleniumhq.selenium:selenium-java:3.141.59') {
+		implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.1'
+        implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+        implementation ('org.seleniumhq.selenium:selenium-java:3.141.59') {
             exclude group:'org.seleniumhq.selenium', module:'selenium-opera-driver'
         }      
         
 
         // ================================ Test ================================
-        testCompile group: 'junit', name:'junit', version: version_junit
+        testImplementation group: 'junit', name:'junit', version: version_junit
 	}
     
     jar{

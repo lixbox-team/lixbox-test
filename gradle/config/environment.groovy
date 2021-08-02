@@ -1,13 +1,13 @@
 desc_project{
     type="library"
     projectSite=false
-    withDocker=true
+    withDocker=false
     withRegistry=false
     withQuarkus=false
     version{
         majorVersion=11
         mediumVersion=1
-        minorVersion=0
+        minorVersion=1
     }
     artefact{
         group="fr.lixbox.lixbox-test"
