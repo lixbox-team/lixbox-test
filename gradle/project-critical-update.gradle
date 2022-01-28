@@ -9,6 +9,23 @@ subprojects {
                     details.useVersion '4.5.13'
                     details.because 'critical cve in 4.5.12'
             }
+            if (details.requested.group.contains('io.netty') && 
+                    details.requested.version.contains('4.1.70.Final')) {
+                    println "correction cve-io.netty-4.1.70.Final"
+                    details.useVersion '4.1.73.Final'
+                    details.because 'critical cve in 4.1.70.Final'
+            }
+            if (details.requested.group.contains('io.netty') && 
+                    details.requested.version.contains('4.1.60.Final')) {
+                    println "correction cve-io.netty-4.1.60.Final"
+                    details.useVersion '4.1.73.Final'
+                    details.because 'critical cve in 4.1.60.Final'
+            }
+            if (details.requested.group.contains('org.jetbrains.kotlin')) {
+                    println "correction cve-org.jetbrains.kotlin"
+                    details.useVersion '1.4.32'
+                    details.because 'critical cve in org.jetbrains.kotlin'
+            }
         }
     }
 }

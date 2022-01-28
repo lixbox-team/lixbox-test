@@ -5,9 +5,9 @@ project(':lixbox-selenium'){
 
         
         //divers
-		implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.1'
+		implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.3'
         implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
-        implementation ('org.seleniumhq.selenium:selenium-java:3.141.59') {
+        implementation ('org.seleniumhq.selenium:selenium-java:4.1.1') {
             exclude group:'org.seleniumhq.selenium', module:'selenium-opera-driver'
         }      
         
