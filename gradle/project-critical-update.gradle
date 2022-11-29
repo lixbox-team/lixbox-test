@@ -2,12 +2,35 @@ println "======================================== critical updates =============
 subprojects {
     configurations.all {
         resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-            if (details.requested.group.contains('org.apache.httpcomponents') && 
-                    details.requested.name.contains('httpclient') &&
-                    details.requested.version.contains('4.5.12')) {
-                    println "correction cve-org.apache.httpcomponents-httpclient-4.5.12"
-                    details.useVersion '4.5.13'
-                    details.because 'critical cve in 4.5.12'
+            if (details.requested.group.contains('org.apache.bcel') && 
+                    details.requested.name.contains('bcel') &&
+                    details.requested.version.contains('6.5.0')) {
+                    println "correction cve-org.apache.bcel.bcel-6.6.1"
+                    details.useVersion '6.6.1'
+            }
+            if (details.requested.group.contains('org.apache.commons') && 
+                    details.requested.name.contains('commons-text') &&
+                    details.requested.version.contains('1.9')) {
+                    println "correction cpe:2.3:a:apache:commons_text:1.9"
+                    details.useVersion '1.10.0'
+            }
+            if (details.requested.group.contains('com.google.code.gson') && 
+                    details.requested.name.contains('gson') &&
+                    details.requested.version.contains('2.8.7')) {
+                    println "correction cpe:2.3:a:google:gson:2.8.7"
+                    details.useVersion '2.10'
+            }
+            if (details.requested.group.contains('io.netty') && 
+                    details.requested.name.contains('netty-codec-socks') &&
+                    details.requested.version.contains('4.1.60.Final')) {
+                    println "correction cpe:2.3:a:netty:netty:4.1.60"
+                    details.useVersion '4.1.85.Final'
+            }
+            if (details.requested.group.contains('io.netty') && 
+                    details.requested.name.contains('netty-handler-proxy') &&
+                    details.requested.version.contains('4.1.60.Final')) {
+                    println "correction cpe:2.3:a:netty:netty:4.1.60"
+                    details.useVersion '4.1.85.Final'
             }
         }
     }
