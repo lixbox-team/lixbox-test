@@ -1,0 +1,39 @@
+project(':lixbox-test-esb'){
+	dependencies {     
+        //lixbox
+		api(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common) 
+
+        //diers
+        implementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.10.2'
+        implementation group: 'com.github.mwiede', name: 'jsch', version: '0.2.18'
+	}
+    
+    jar{
+       manifest {
+            attributes(
+                "Implementation-Title": project.name, 
+                "Implementation-Version": archiveVersion, 
+                "Implementation-Timestamp": new Date()
+            )
+        }
+    }
+    
+    eclipse{
+        wtp{
+            facet {
+            
+                facet name: 'jst.cdi', version: '2.0'
+                facet name: 'jst.utility', version: '1.0'
+            }
+        }
+    }
+	
+	sonarqube {
+		properties {
+           property "sonar.projectKey", "${config.desc_project.artefact.group}.${rootProject.name}:${project.name}"
+           property "sonar.projectName", "${project.name}"
+		   property "sonar.sources","src/main"
+		   property "sonar.tests","src/test"
+        }
+	}	
+}

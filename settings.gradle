@@ -2,3 +2,4 @@ rootProject.name = 'lixbox-test'
 
 /** Projet importé */
 include 'lixbox-selenium'
+include 'lixbox-test-esb'
