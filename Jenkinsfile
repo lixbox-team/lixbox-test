@@ -2,7 +2,7 @@ BUILD_STATUS = 'success';
 gitUri = 'https://github.com/lixbox-team/lixbox-test.git';
 teamsHook  = '${TEAMS_BOT_URI}';
 channel = 'lixbox';
-branchName = 'jdk-11'
+branchName = 'jdk-17'
 
 @NonCPS
 def onFailed(e) {
@@ -14,7 +14,7 @@ def onFailed(e) {
 }
 
 withCredentials([usernamePassword(credentialsId: 'e1529c62-f3ec-4b12-bbad-2a352fda9af2', usernameVariable: 'JENKINS_LOGIN', passwordVariable: 'JENKINS_PWD')]) {
-	node('slave-gradle-jdk11') {    
+	node('slave-gradle-jdk17') {    
 	    stage('Init'){
 	        echo 'Initialisation started'
 	        office365ConnectorSend message: 'The '+JOB_NAME+' - Build # '+BUILD_NUMBER+'  start. \n Check console output at '+BUILD_URL+' to view the results ' , webhookUrl: teamsHook, color: "rgb(184, 255, 184)"
