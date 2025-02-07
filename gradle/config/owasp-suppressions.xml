@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
-<!-- Failles applicables au navigateur et non à la librairie -->
-<suppress>
-   <notes><![CDATA[
-   file name: selenium-chromium-driver-4.6.0.jar
-   ]]></notes>
-   <packageUrl regex="true">^pkg:maven/org\.seleniumhq\.selenium/selenium\-chromium\-driver@.*$</packageUrl>
-   <cpe>cpe:/a:chromium:chromium</cpe>
-</suppress>
-<suppress>
-   <notes><![CDATA[
-   file name: selenium-chromium-driver-4.6.0.jar
-   ]]></notes>
-   <packageUrl regex="true">^pkg:maven/org\.seleniumhq\.selenium/selenium\-chromium\-driver@.*$</packageUrl>
-   <cpe>cpe:/a:chromium_project:chromium</cpe>
-</suppress>
+  <suppress>
+    <notes><![CDATA[CVE-CVE-2023-45960 - dom4j sans correction]]></notes>
+    <cve>CVE-2023-45960</cve>
+  </suppress>
+  
+  <!-- Erreur common-net -->
+  <suppress>
+    <notes><![CDATA[CVE-2021-37533 - hors sujet commons-net]]></notes>
+    <cve>CVE-2021-37533</cve>
+  </suppress>
+
+  <!-- Erreur apache;james-->
+  <suppress>
+    <notes><![CDATA[apache-james]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.apache\.james.*$</packageUrl>
+    <cpe>cpe:/a:apache:james</cpe>
+  </suppress>
+
+  <!--  Erreur eclipse ide -->
+  <suppress>
+     <notes><![CDATA[Jakarta.activation-api - hors sujet sur une API]]></notes>
+     <cpe>cpe:/a:eclipse:eclipse_ide</cpe>
+  </suppress>
+  
+  <suppress>
+    <notes><![CDATA[eclipse:glassfish]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.glassfish.*$</packageUrl>
+    <cpe>cpe:/a:eclipse:glassfish</cpe>
+  </suppress>
+  
+  <!--  Erreur jackson-core -->
+  <suppress>
+    <notes><![CDATA[jackson-core - hors sujet component of hutool-json v5.8.10 ]]></notes>
+    <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson\-core@.*$</packageUrl>
+    <cpe>cpe:/a:json-java_project:json-java</cpe>
+  </suppress>  
+  <suppress>
+     <notes><![CDATA[json-java_project:json-java]]></notes>
+     <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.jakarta\.rs/jackson\-jakarta\-rs\-json\-provider@.*$</packageUrl>
+     <cpe>cpe:/a:json-java_project:json-java</cpe>
+  </suppress>  
+  <suppress>
+    <notes><![CDATA[json-java_project:json-java]]></notes>
+    <packageUrl regex="true">^pkg:maven/com\.github\.java\-json.*$</packageUrl>
+    <cpe>cpe:/a:json-java_project:json-java</cpe>
+  </suppress>
+  
+  <suppress>
+     <notes><![CDATA[apache-mime4j]]></notes>
+     <packageUrl regex="true">^pkg:maven/org\.apache\.james/apache\-mime4j.*$</packageUrl>
+     <cpe>cpe:/a:jdom:jdom</cpe>
+  </suppress>
+  <suppress>
+     <notes><![CDATA[
+     file name: apache-mime4j-storage-0.8.11.jar
+     ]]></notes>
+     <packageUrl regex="true">^pkg:maven/org\.apache\.james/apache\-mime4j\-storage@.*$</packageUrl>
+     <cpe>cpe:/a:storage_project:storage</cpe>
+  </suppress>
+  <suppress>
+     <notes><![CDATA[
+     file name: asyncutil-0.1.0.jar
+     ]]></notes>
+     <packageUrl regex="true">^pkg:maven/com\.ibm\.async/asyncutil@.*$</packageUrl>
+     <cpe>cpe:/a:async_project:async</cpe>
+  </suppress>
 </suppressions>

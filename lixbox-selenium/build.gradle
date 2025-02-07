@@ -5,7 +5,7 @@ project(':lixbox-selenium'){
 
         
         //divers
-        implementation ('org.seleniumhq.selenium:selenium-java:4.6.0') {
+        implementation ('org.seleniumhq.selenium:selenium-java:4.28.1') {
             exclude group:'org.seleniumhq.selenium', module:'selenium-opera-driver'
             exclude group:'org.seleniumhq.selenium', module:'selenium-ie-driver'
             exclude group:'org.seleniumhq.selenium', module:'selenium-safari-driver'
@@ -13,7 +13,7 @@ project(':lixbox-selenium'){
         
 
         // ================================ Test ================================
-        testImplementation group: 'junit', name:'junit', version: version_junit
+        testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: version_junit
 	}
     
     jar{
@@ -29,8 +29,6 @@ project(':lixbox-selenium'){
     eclipse{
         wtp{
             facet {
-            
-                facet name: 'jst.cdi', version: '2.0'
                 facet name: 'jst.utility', version: '1.0'
             }
         }

@@ -15,7 +15,7 @@ buildscript {
 plugins {
     id "org.sonarqube" version "3.5.0.2730"
     id "com.github.jk1.dependency-license-report" version "1.16"
-    id "org.ajoberstar.grgit" version "4.0.2"
+    id "org.ajoberstar.grgit" version "5.3.0"
     id "com.github.spotbugs" version "4.7.2"
     id 'maven-publish'
 }
@@ -211,8 +211,8 @@ subprojects {
 	    sign publishing.publications.mavenJava
 	}
     
-    sourceCompatibility = 11
-    targetCompatibility = 11
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
     compileJava.options.encoding = 'UTF-8'
     
     
@@ -329,6 +329,7 @@ subprojects {
             password=System.getProperty("jenkins.password")
         }
         analyzers{
+            assemblyEnabled=false
             centralEnabled=false
             retirejs{enabled=false}
         }
